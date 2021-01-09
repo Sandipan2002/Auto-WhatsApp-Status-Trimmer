@@ -1,0 +1,33 @@
+<Label>:
+  size_hint_y: 0.1
+  markup: True
+
+<MyGrid>:
+  filechooser: filechooser
+  op: op
+  status: status
+  but1: but1
+  GridLayout:
+    cols: 1
+    size: root.width, root.height
+    Label:
+      text: "[b]WA-Status-Of-Large-Videos\nDeveloper: Sandipan Chowdhury[/b]"
+
+    FileChooserIconView:
+      id: filechooser 
+      on_selection: root.selected()
+    TextInput:
+      id: op
+      font_size:12
+      multiline: False
+      size_hint_y: 0.1
+      disabled: True
+    Button:
+      id: but1
+      text: "Create Status"
+      on_press: root.status_maker()
+    Label:
+      id: status 
+      font_size: 12
+      size_hint_y:0.2
+      text: "Please Choose an .mp4 File."
